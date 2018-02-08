@@ -1,0 +1,19 @@
+<table class="table table-bordered text-center">
+    <thead class="thead-dark">
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Cargo</th>
+        <th>Contratado</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let empleado of empleados; let i = index">
+      <tr>
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.edad}}</td>
+        <td>{{empleado.cargo}}</td>
+        <td *ngIf="empleado.contratado==true">Si</td>
+        <td *ngIf="empleado.contratado==false">No</td>
+      </tr>
+    </tbody>
+  </table>
